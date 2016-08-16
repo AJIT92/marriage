@@ -33,6 +33,7 @@ public class Invitation extends FragmentActivity implements ActionBar.TabListene
     ActionBar actionBar;
     ViewPager viewPager;
     Context ctx;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
