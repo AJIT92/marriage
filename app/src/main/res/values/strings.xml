@@ -1,0 +1,23 @@
+<resources>
+    <string name="txtTimerHour">00:</string>
+    <string name="txtTimerDay">00:</string>
+    <string name="txtTimerMinute">00:</string>
+    <string name="txtTimerSecond">00</string>
+
+    <string name="app_name">A weds E</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="invite" translatable="false">My Wedding Invitation</string>
+    <string name="wishes" translatable="false">Wish Me</string>
+    <string name="contact" translatable="false">Contact</string>
+    <string name="venue" translatable="false">Venue</string>
+    <string name="direction" translatable="false">Directions</string>
+    <string name="events" translatable="false">Events </string>
+    <string name="alertmessage" translatable="false">Please turn on GPS</string>
+    <string name="alerttitle" translatable="false">Locate me</string>
+    <string name="Ideaspartner">Idea Partners:Siva,Pavitra</string>
+    <string name="TechincalInput">Technical Partner:Google</string>
+    <string name="BrideGroom">BrideGroom:Ernest Victor Thomas </string>
+    <string name="Bride">Bride: Andrea Xavier</string>
+    <string name="i_am_yours_you_are_mine_from_this_day_till_the_end_of_my_days"><![CDATA[I Am Yours & You Are Mine,From This Day Till The End Of My Days]]></string>
+</resources>
