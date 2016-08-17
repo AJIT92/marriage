@@ -31,13 +31,12 @@ public class Countdown extends Activity {
 
     @SuppressLint("SimpleDateFormat")
     private void initUI() {
-        linearLayout1 = (LinearLayout) findViewById(R.id.ll1);
+
         linearLayout2 = (LinearLayout) findViewById(R.id.ll2);
         tvDay = (TextView) findViewById(R.id.txtTimerDay);
         tvHour = (TextView) findViewById(R.id.txtTimerHour);
         tvMinute = (TextView) findViewById(R.id.txtTimerMinute);
         tvSecond = (TextView) findViewById(R.id.txtTimerSecond);
-        tvEvent = (TextView) findViewById(R.id.tvevent);
     }
 
     // //////////////COUNT DOWN START/////////////////////////

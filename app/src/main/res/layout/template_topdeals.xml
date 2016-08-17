@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bestSellerBannerLayout"
+                android:orientation="vertical">
+    <com.example.ajithmarshall.ajith.ResizableImageView
+        android:id="@+id/imgDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/graywide"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/placeholder"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:src="@drawable/graywide" />-->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleDimension="10dp"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleRoundedCorners="0dp"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_ripplePersistent="false"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/topproducts_ripple"
+            >
+        </FrameLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

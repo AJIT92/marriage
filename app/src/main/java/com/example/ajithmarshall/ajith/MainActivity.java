@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 import com.example.ajithmarshall.ajith.adapter.AboutUs;
 import com.example.ajithmarshall.ajith.adapter.ContactMe;
 import com.example.ajithmarshall.ajith.adapter.Countdown;
+import com.example.ajithmarshall.ajith.adapter.SlowViewPager;
+import com.example.ajithmarshall.ajith.adapter.TopDealsPagerAdapter;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -28,15 +31,32 @@ public class MainActivity extends Activity implements OnClickListener {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-
+    int currentPageIndicator = 0;
+    Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         try {
             TextView tx = (TextView) findViewById(R.id.textView);
-            Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Game of Thrones.ttf");
             tx.setTypeface(custom_font);
+            tx =(TextView)findViewById(R.id.invitation);
+            custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            tx.setTypeface(custom_font);
+            tx = (TextView)findViewById(R.id.countdown);
+            custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            tx.setTypeface(custom_font);
+            tx=(TextView)findViewById(R.id.menu);
+            custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            tx.setTypeface(custom_font);
+            tx=(TextView)findViewById(R.id.button);
+            custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            tx.setTypeface(custom_font);
+            tx=(TextView)findViewById(R.id.aboutus);
+            custom_font = Typeface.createFromAsset(getAssets(), "fonts/Remac.ttf");
+            tx.setTypeface(custom_font);
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -46,9 +66,26 @@ public class MainActivity extends Activity implements OnClickListener {
         Button btnschedule = (Button) findViewById(R.id.menu);
         Button btnmap = (Button) findViewById(R.id.button);
         Button btnaboutus = (Button) findViewById(R.id.aboutus);
-
+        final SlowViewPager slider =(SlowViewPager) findViewById(R.id.pager);
         iconAnim = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.iconanime);
+        TopDealsPagerAdapter topDealsPagerAdapter = new TopDealsPagerAdapter(this);
+        slider.setAdapter(topDealsPagerAdapter);
+
+        handler = new Handler();
+        final Runnable r = new Runnable() {
+            //            int i=0;
+            public void run() {
+                slider.setCurrentItem(currentPageIndicator,true);
+                handler.postDelayed(this, 3000);
+                currentPageIndicator++;
+                currentPageIndicator%=5;
+            }
+        };
+        handler.postDelayed(r, 3000);
+
+
+
 
         btnInvite.startAnimation(iconAnim);
         btncountdown.setAnimation(iconAnim);

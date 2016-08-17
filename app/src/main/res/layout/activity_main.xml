@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b8ccef"
+    android:background="#fff"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.ajithmarshall.ajith.MainActivity">
 
@@ -25,6 +25,11 @@
     </android.support.v7.widget.Toolbar>
 
 
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
@@ -32,14 +37,28 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/pager_layout">
+            <com.example.ajithmarshall.ajith.adapter.SlowViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+
         <TextView
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/i_am_yours_you_are_mine_from_this_day_till_the_end_of_my_days"
-            android:textSize="30dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:textSize="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:textColor="#000"
             android:id="@+id/textView" />
 
@@ -50,9 +69,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/invite"
+            android:textSize="25dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textColor="#3F51B5"
+            android:textColor="#000"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
@@ -62,7 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Our Countdown"
-            android:textColor="#3F51B5"
+            android:textColor="#000"
+            android:textSize="30dp"
             android:layout_marginBottom="20dp"
             android:layout_below="@+id/invitation"
             android:layout_centerHorizontal="true" />
@@ -72,7 +93,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Information"
-            android:textColor="#3F51B5"
+            android:textSize="35dp"
+            android:textColor="#000"
             android:layout_below="@+id/venue"
             android:layout_centerHorizontal="true" />
 
@@ -81,7 +103,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Location"
-            android:textColor="#3F51B5"
+            android:textColor="#000"
+            android:textSize="35dp"
             android:id="@+id/button"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/menu"
@@ -93,11 +116,14 @@
             android:layout_height="50dp"
             android:text="About Us"
             android:id="@+id/aboutus"
-            android:textColor="#3F51B5"
+            android:textColor="#000"
+            android:textSize="40dp"
             android:layout_below="@+id/button"
             android:layout_marginTop="20dp" />
 
     </LinearLayout>
+    </ScrollView>
+
 
 
 
