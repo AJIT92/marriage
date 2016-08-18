@@ -21,6 +21,7 @@ public class Location extends Activity implements OnClickListener {
         setContentView(R.layout.location);
         Button btnch = (Button) findViewById(R.id.church);
         btnch.setOnClickListener(this);
+
         Button btnhall =(Button)findViewById(R.id.marriagehall);
         btnhall.setOnClickListener(this);
     }
