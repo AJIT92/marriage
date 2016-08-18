@@ -25,7 +25,7 @@
         <activity android:name="com.example.ajithmarshall.ajith.Invitation"
             android:label="=@string/app_name"
             android:screenOrientation="portrait">
-            
+
         </activity>
         <activity
             android:name="com.example.ajithmarshall.ajith.adapter.ContactMe"
@@ -36,6 +36,11 @@
             android:name="com.example.ajithmarshall.ajith.adapter.AboutUs"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.example.ajithmarshall.ajith.adapter.Location"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
         </activity>
         <activity
             android:name="com.example.ajithmarshall.ajith.adapter.Countdown"

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.ajithmarshall.ajith.adapter.AboutUs;
 import com.example.ajithmarshall.ajith.adapter.ContactMe;
 import com.example.ajithmarshall.ajith.adapter.Countdown;
+import com.example.ajithmarshall.ajith.adapter.Location;
 import com.example.ajithmarshall.ajith.adapter.SlowViewPager;
 import com.example.ajithmarshall.ajith.adapter.TopDealsPagerAdapter;
 import com.google.android.gms.appindexing.Action;
@@ -143,14 +144,14 @@ public class MainActivity extends Activity implements OnClickListener {
                 intent = new Intent(getApplicationContext(), AboutUs.class);
                 startActivity(intent);
                 break;
+            case R.id.button:
+                intent =new Intent(getApplicationContext(), Location.class);
+                startActivity(intent);
+                break;
             case R.id.menu:
                 intent = new Intent(getApplicationContext(), ContactMe.class);
                 startActivity(intent);
                 break;
-            case R.id.button:
-                intent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?daddr=9.9809415,78.1706536"));
-                startActivity(intent);
 
         }
     }
